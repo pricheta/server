@@ -10,9 +10,4 @@ services:
       - ./alembic:/app/alembic
 
     networks:
-      - base
-
-networks:
-  base:
-    name: base
-    external: true
+      - pricheta_network

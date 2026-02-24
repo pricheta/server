@@ -5,9 +5,4 @@ services:
     restart: unless-stopped
 
     networks:
-      - base
-
-networks:
-  base:
-    name: base
-    external: true
+      - pricheta_network
