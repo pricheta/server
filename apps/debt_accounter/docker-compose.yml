@@ -2,6 +2,8 @@ services:
   debt_accounter:
     image: prichetaboss/debt_accounter:release-2026-02-24
     container_name: debt_accounter
+    env_file:
+      - .env
     ports:
       - "8000:8000"
     restart: unless-stopped
