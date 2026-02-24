@@ -17,3 +17,8 @@ services:
 
     networks:
       - pricheta_network
+
+networks:
+  pricheta_network:
+    driver: bridge
+    external: true
