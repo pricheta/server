@@ -6,9 +6,6 @@ services:
       - "8000:8000"
     restart: unless-stopped
 
-    volumes:
-      - ./alembic:/app/alembic
-
     networks:
       - pricheta_network
 
