@@ -1,0 +1,18 @@
+services:
+  debt_accounter:
+    build: .
+    container_name: debt_accounter
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+    volumes:
+      - ./alembic:/app/alembic
+
+    networks:
+      - base
+
+networks:
+  base:
+    name: base
+    external: true
