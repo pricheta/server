@@ -1,6 +1,6 @@
 services:
   tg_bot:
-    image: prichetaboss/pricheta_bot:release-2026-02-24
+    image: prichetaboss/pricheta_bot:latest
     container_name: tg_bot
     env_file:
       - .env
