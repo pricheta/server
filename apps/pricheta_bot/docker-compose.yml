@@ -1,6 +1,6 @@
 services:
   tg_bot:
-    build: .
+    image: prichetaboss/pricheta_bot:release-2026-02-24
     container_name: tg_bot
     restart: unless-stopped
 
