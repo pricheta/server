@@ -1,10 +1,10 @@
 services:
-  tg_bot:
+  pricheta_bot:
     image: prichetaboss/pricheta_bot:latest
-    container_name: tg_bot
+    container_name: pricheta_bot
+    restart: unless-stopped
     env_file:
       - .env
-    restart: unless-stopped
 
     networks:
       - pricheta_network
