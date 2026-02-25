@@ -1,3 +1,3 @@
-/apps/*/.env
+.env
 /.idea/.gitignore
 /.idea/vcs.xml
