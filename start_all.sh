@@ -1,12 +1,12 @@
 cd apps/db/
-. run.sh
+. start.sh
 cd ../..
 
 cd apps/debt_accounter/
-. run.sh
+. start.sh
 cd ../..
 
 cd apps/pricheta_bot/
-. run.sh
+. start.sh
 cd ../..
 

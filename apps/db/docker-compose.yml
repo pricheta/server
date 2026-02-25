@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:16.11-alpine3.23
+    image: prichetaboss/db:latest
     container_name: db
     restart: unless-stopped
 
