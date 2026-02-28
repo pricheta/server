@@ -1,1 +1,0 @@
-docker network create pricheta_network -d bridge

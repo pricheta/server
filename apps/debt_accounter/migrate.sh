@@ -1,1 +1,0 @@
-docker-compose run --rm debt_accounter uv run alembic upgrade head

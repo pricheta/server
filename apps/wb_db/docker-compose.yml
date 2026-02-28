@@ -1,0 +1,30 @@
+services:
+  wb_db:
+    image: prichetaboss/db:latest
+    container_name: wb_db
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+        reservations:
+          memory: 256M
+
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: wb_db
+
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+    ports:
+      - "5432:5432"
+
+    networks:
+      - wb_network
+
+networks:
+  wb_network:
+    driver: bridge
+    external: true
