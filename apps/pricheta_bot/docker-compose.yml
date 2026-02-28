@@ -3,6 +3,12 @@ services:
     image: prichetaboss/pricheta_bot:latest
     container_name: pricheta_bot
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+        reservations:
+          memory: 256M
     env_file:
       - .env
 

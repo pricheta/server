@@ -3,6 +3,12 @@ services:
     image: prichetaboss/debt_accounter:latest
     container_name: debt_accounter
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+        reservations:
+          memory: 256M
     env_file:
       - .env
 
