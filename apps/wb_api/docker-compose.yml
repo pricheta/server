@@ -1,0 +1,9 @@
+services:
+  wb_api:
+    image: prichetaboss/wp_api:test
+    container_name: wb_api
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
