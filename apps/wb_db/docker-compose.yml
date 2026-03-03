@@ -1,6 +1,6 @@
 services:
   wb_db:
-    image: prichetaboss/db:latest
+    image: postgres:16.11-alpine3.23
     container_name: wb_db
     restart: unless-stopped
     deploy:
@@ -22,9 +22,9 @@ services:
       - "5432:5432"
 
     networks:
-      - wb_network
+      - wb
 
 networks:
-  wb_network:
+  wb:
     driver: bridge
     external: true

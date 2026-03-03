@@ -1,6 +1,6 @@
 services:
   db:
-    image: prichetaboss/db:latest
+    image: postgres:16.11-alpine3.23
     container_name: db
     restart: unless-stopped
     deploy:
@@ -19,9 +19,9 @@ services:
       - ./data:/var/lib/postgresql/data
 
     networks:
-      - pricheta_network
+      - pricheta
 
 networks:
-  pricheta_network:
+  pricheta:
     driver: bridge
     external: true

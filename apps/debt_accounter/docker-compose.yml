@@ -13,9 +13,9 @@ services:
       - .env
 
     networks:
-      - pricheta_network
+      - pricheta
 
 networks:
-  pricheta_network:
+  pricheta:
     driver: bridge
     external: true
