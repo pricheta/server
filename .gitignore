@@ -1,7 +1,6 @@
+/.idea/*
+
 .env
-/.idea/.gitignore
-/.idea/vcs.xml
-/.idea/inspectionProfiles/profiles_settings.xml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/server.iml
+
+*/data/*
+/apps/wb/prometheus/prometheus/

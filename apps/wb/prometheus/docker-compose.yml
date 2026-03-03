@@ -10,8 +10,8 @@ services:
       - "9090:9090"
 
     volumes:
+      - ./prometheus:/prometheus
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
-      - prometheus_data:/prometheus
 
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
@@ -20,15 +20,9 @@ services:
       - '--web.enable-lifecycle'
 
     networks:
-      - wb_network
-
+      - wb
 
 networks:
   wb_network:
     driver: bridge
     external: true
-
-
-volumes:
-  prometheus_data:
-    driver: local
