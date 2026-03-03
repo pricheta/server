@@ -1,6 +1,6 @@
 services:
   wb_api:
-    image: prichetaboss/wp_api:test
+    image: prichetaboss/wb_api:test
     container_name: wb_api
     restart: unless-stopped
 
