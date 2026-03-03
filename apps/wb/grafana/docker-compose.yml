@@ -1,0 +1,15 @@
+services:
+  grafana:
+    image: grafana/grafana:12.4-ubuntu
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+
+    networks:
+      - wb
+
+networks:
+  wb:
+    driver: bridge
+    external: true
