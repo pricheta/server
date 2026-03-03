@@ -23,6 +23,6 @@ services:
       - wb
 
 networks:
-  wb_network:
+  wb:
     driver: bridge
     external: true
