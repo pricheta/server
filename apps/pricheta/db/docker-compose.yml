@@ -3,6 +3,7 @@ services:
     image: postgres:16.11-alpine3.23
     container_name: db
     restart: unless-stopped
+
     deploy:
       resources:
         limits:

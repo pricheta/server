@@ -3,6 +3,14 @@ services:
     image: prom/prometheus:v3.10.0-rc.1-distroless
     container_name: prometheus
     restart: unless-stopped
+
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+        reservations:
+          memory: 256M
+
     ports:
       - "9090:9090"
 
