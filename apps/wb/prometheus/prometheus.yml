@@ -5,4 +5,4 @@ global:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: ['localhost:9090', 'wb_api:8000', '82.202.138.65:9100']
+      - targets: ['localhost:9090', 'wb_api:8000', '82.202.138.65:9100, worker:8001']
