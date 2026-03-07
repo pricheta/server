@@ -20,6 +20,27 @@ services:
     networks:
       - wb
 
+  worker:
+    image: prichetaboss/wb_worker:test
+    container_name: worker
+    restart: unless-stopped
+
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+        reservations:
+          memory: 128M
+
+    env_file:
+      - .env
+
+    ports:
+      - "8001:8001"
+
+    networks:
+      - wb
+
 networks:
   wb:
     driver: bridge
