@@ -7,9 +7,9 @@ services:
     deploy:
       resources:
         limits:
-          memory: 128M
+          memory: 64M
         reservations:
-          memory: 128M
+          memory: 64M
 
     ports:
       - "9090:9090"
